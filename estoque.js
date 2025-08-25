@@ -5,10 +5,7 @@ let estoque = [{nome: 'laranja', qtd: 100, valor: 2}, {nome: 'uva', qtd: 30, val
 let input;
 
 function w(a, f) {
-    if (/^[a-z]+$/.test(`${a}`)) {
-        return f(a);
-    }
-    console.log("\n--!!!--Entrada Inválida!\n");
+    return (/^[a-z]+$/.test(`${a}`)) ? f(a) : (() => {console.log("\n--!!!--Entrada Inválida!\n");})();
 }
 
 function in_stock(nome) {
